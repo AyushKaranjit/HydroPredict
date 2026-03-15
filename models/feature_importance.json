@@ -1,0 +1,17 @@
+{
+  "generation_mw_rmean7": 0.5191108584403992,
+  "generation_mw_rmean14": 0.2850243151187897,
+  "generation_mw_rmean3": 0.17810383439064026,
+  "temperature_c_rmean30": 0.0019899921026080847,
+  "generation_mw_lag1": 0.001875047804787755,
+  "generation_mw_lag3": 0.0018214603187516332,
+  "river_flow_cumecs": 0.0016188774025067687,
+  "temperature_c_rmean14": 0.0012448107590898871,
+  "generation_mw_lag2": 0.000621423649135977,
+  "pressure_hpa": 0.0005812417366541922,
+  "rainfall_mm_rmean7": 0.0005743593210354447,
+  "day_of_year": 0.000525099691003561,
+  "generation_mw_rmean30": 0.0005074604996480048,
+  "river_flow_cumecs_lag2": 0.00044295130646787584,
+  "river_flow_cumecs_lag1": 0.0004096846387255937
+}
