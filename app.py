@@ -1,8 +1,3 @@
-"""
-HydroPredict AI — Climate-Aware Renewable Grid Optimizer
-Streamlit Dashboard for the AI Hackathon 2026
-"""
-
 import json
 from pathlib import Path
 
@@ -22,7 +17,7 @@ from src.data_generator import (
 # ── Page Config ──────────────────────────────────────────────────────────────
 
 st.set_page_config(
-    page_title="HydroPredict AI",
+    page_title="Voltide",
     page_icon="",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -324,7 +319,7 @@ forecast_df = get_forecast(district, rain_modifier, temp_modifier)
 
 st.markdown(
     '<div class="hero-header">'
-    '<h1>Voltide</h1>'
+    '<h1>VOLTIDE</h1>'
     '<p>Predicting hydropower generation to keep Nepal\'s grid stable</p>'
     '</div>',
     unsafe_allow_html=True,
