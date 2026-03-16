@@ -324,8 +324,8 @@ forecast_df = get_forecast(district, rain_modifier, temp_modifier)
 
 st.markdown(
     '<div class="hero-header">'
-    '<h1>HydroPredict AI</h1>'
-    '<p>Climate-Aware Renewable Grid Optimizer — Predicting hydropower generation to keep Nepal\'s grid stable</p>'
+    '<h1>Voltide</h1>'
+    '<p>Predicting hydropower generation to keep Nepal\'s grid stable</p>'
     '</div>',
     unsafe_allow_html=True,
 )
