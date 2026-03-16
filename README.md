@@ -1,48 +1,94 @@
-## Quick Start
+## Prerequisites
 
-1. **Clone the repo & enter the folder**
-   ```bash
-   git clone <this-repo-url>
-   cd hydropower-hackathon
-   ```
+•⁠  ⁠Python 3.10+
+•⁠  ⁠pip (bundled with Python)
 
-2. **Install dependencies**
-   - Make sure you have a recent **Python 3** (e.g. 3.10+).
-   - Then run:
-     ```bash
-     pip install -r requirements.txt
-     ```
+Verify installation:
 
-3. **Ensure the main dataset exists**
-   - Confirm that the file `data/nepali_multi_district.csv` is present.
-   - If it’s missing, copy/download it into the `data/` folder **with exactly this filename**.
+⁠ bash
+python --version
+python -m pip --version
+ ⁠
 
-4. **Run everything with one command (recommended)**
-   From the project root:
-   ```bash
-   python run.py
-   ```
-   This will:
-   - Train the model on `data/nepali_multi_district.csv`.
-   - Launch the Streamlit dashboard.
+If ⁠ pip ⁠ fails, use ⁠ python -m pip ⁠ instead of ⁠ pip ⁠.
 
-   Then open `http://localhost:8501` in your browser.
+## Setup
 
----
+1.⁠ ⁠Clone and enter the project:
 
-## Manual Setup (alternative)
+⁠ bash
+git clone <this-repo-url>
+cd <file-name>
+ ⁠
 
-If you prefer to run each step yourself:
+2.⁠ ⁠Create and activate a virtual environment:
 
-```bash
-# (Optional) Generate synthetic demo data
-python -m src.data_generator
+Windows PowerShell:
 
-# Train the model on data/nepali_multi_district.csv
+⁠ powershell
+python -m venv .venv
+.\.venv\Scripts\Activate.ps1
+ ⁠
+
+macOS/Linux:
+
+⁠ bash
+python -m venv .venv
+source .venv/bin/activate
+ ⁠
+
+3.⁠ ⁠Install dependencies:
+
+⁠ bash
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
+ ⁠
+
+## Run Options
+
+### Option A: Launch dashboard with existing trained model (fastest)
+
+Use this when model files already exist in ⁠ models/ ⁠.
+
+⁠ bash
+streamlit run app.py
+ ⁠
+
+Open ⁠ http://localhost:8501 ⁠.
+
+### Option B: Retrain model and launch dashboard
+
+Use this if you want fresh training.
+
+Required dataset:
+
+•⁠  ⁠⁠ data/nepali_multi_district.csv ⁠
+
+Run:
+
+⁠ bash
+python run.py
+ ⁠
+
+This trains from the dataset and then starts Streamlit.
+
+## Manual Pipeline
+
+⁠ bash
+# Train model only (requires data/nepali_multi_district.csv)
 python -m src.model
 
-# Launch the dashboard
+# Launch UI only
 streamlit run app.py
-```
+ ⁠
 
-The only required dataset is `data/nepali_multi_district.csv`; the other CSVs are optional/demo outputs produced by the data generator.
+## Common Issues
+
+•⁠  ⁠⁠ pip install python3 ⁠ fails:
+   - ⁠ python3 ⁠ is not a package. Install dependencies with:
+   - ⁠ python -m pip install -r requirements.txt ⁠
+•⁠  ⁠⁠ FileNotFoundError: data/nepali_multi_district.csv ⁠:
+   - Use Option A (⁠ streamlit run app.py ⁠) if you only want to run the UI with pre-trained artifacts.
+   - Or add the dataset and use Option B.
+•⁠  ⁠⁠ streamlit ⁠ not found:
+   - Activate your virtual environment and reinstall requirements.
